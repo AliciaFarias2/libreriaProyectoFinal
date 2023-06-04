@@ -112,29 +112,29 @@ module.exports = {
 
     },
 
-  //  filtroPorTitulo : (req,res) => {
-   //     const {nombre} = req.query;
-     //   db.Libro.findAll({
-       //     where: { nombre: nombre},
-         //   include: [db.Autor, db.Categoria],
-    //    })
-      //  .then((libros)=>{
-        //    const resultado = libros.map((libro)=>{
-          //      return {
-            //        id: libro.id,
-              //      nombre: libro.nombre,
-                //    autor: libro.Autor.nombres + " " + libro.Autor.apellido,
-                  //  categoria: libro.Categorium.nombre,
-               // };
-       //     });
-       //     res.json(resultado);
-      //  })
-      //  .catch((error)=> {
-      //      console.log(error);
-      //  })
-   // }, 
+    /*  filtroPorTitulo : (req,res) => {
+        const {nombre} = req.query;
+            db.Libro.findAll({
+                where: { nombre: nombre},
+            include: [db.Autor, db.Categoria],
+            })
+            .then((libros)=>{
+                const resultado = libros.map((libro)=>{
+                    return {
+                        id: libro.id,
+                        nombre: libro.nombre,
+                        autor: libro.Autor.nombres + " " + libro.Autor.apellido,
+                        categoria: libro.Categorium.nombre,
+                    };
+                });
+                res.json(resultado);
+            })
+            .catch((error)=> {
+            console.log(error);
+            })
+    }, */
 
-  filtroPorTitulo: (nombre) => {             
+  /*filtroPorTitulo: (nombre) => {             
     return db.Libro.findAll({
         where: { nombre: nombre }
     })
@@ -144,5 +144,5 @@ module.exports = {
         .catch((error) => {
             console.log(error);
         })
-    },
+    },*/
 }
