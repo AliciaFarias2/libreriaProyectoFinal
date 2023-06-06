@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import Header from "./components/Header";
-import Header from "./components/Navbar";
-import Header from "./components/Libros";
+import Navbar from "./components/Navbar";
+import Libros from "./components/Libros";
+import Categoria from "./components/Categoria";
+import DetallesLibro from "./components/DetallesLibro";
 import './App.css';
 import {
   //redireccionamiento
@@ -10,8 +12,6 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import Header from './components/Header';
-import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -22,6 +22,8 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="libros" element={<Libros/>} />
+          <Route path="categoria" element={<Categoria/>} />
+          <Route path="detallesLibro/:id" element={<DetallesLibro/>} />
         </Routes>
       </Router>
     </>

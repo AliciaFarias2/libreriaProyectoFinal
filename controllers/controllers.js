@@ -1,5 +1,6 @@
 
 const db = require("../models");
+const {Op} = require("sequelize");
 
 module.exports = {
     libros: (req, res) => {
@@ -71,23 +72,22 @@ module.exports = {
         });
         Promise.all([detallesDeLibro]).then(([Libro
         ])=>{
-            
-            let resultado = {
-                nombre: Libro.nombre,
-                lanzamiento: Libro.fecha_lanzamiento,
-                paginas: Libro.paginas,
-                idioma: Libro.idioma,
-                categoria: Libro.Categorium.nombre,
-                editorial: Libro.Editorial.nombre,
-                Autor: Libro.Autor.nombres + " " + Libro.Autor.apellido,
-                fechaNacimientoAutor: Libro.Autor.fecha_de_nacimiento,
-                nacionalidadAutor: Libro.Autor.nacionalidad
+            if (Libro) {
+                let resultado = {
+                    nombre: Libro.nombre,
+                    lanzamiento: Libro.fecha_lanzamiento,
+                    paginas: Libro.paginas,
+                    idioma: Libro.idioma,
+                    categoria: Libro.Categorium.nombre,
+                    editorial: Libro.Editorial.nombre,
+                    Autor: Libro.Autor.nombres + " " + Libro.Autor.apellido,
+                    fechaNacimientoAutor: Libro.Autor.fecha_de_nacimiento,
+                    nacionalidadAutor: Libro.Autor.nacionalidad
+                }
+                res.json(resultado);
             }
-            res.json(resultado);
+            
         })
-
-
-
     },
     
     crearLibro: (req,res)=>{
@@ -112,11 +112,14 @@ module.exports = {
 
     },
 
-    /*  filtroPorTitulo : (req,res) => {
-        const {nombre} = req.query;
+    filtroPorTitulo : (req,res) => {
+        const {nombre} = req.body;
+        console.log(nombre);
+
+           if (nombre != undefined) {
             db.Libro.findAll({
-                where: { nombre: nombre},
-            include: [db.Autor, db.Categoria],
+                where: {nombre: {[Op.like]: "%" + nombre + "%"}},
+            include : [db.Autor, db.Categoria],
             })
             .then((libros)=>{
                 const resultado = libros.map((libro)=>{
@@ -130,19 +133,9 @@ module.exports = {
                 res.json(resultado);
             })
             .catch((error)=> {
-            console.log(error);
-            })
-    }, */
+                console.log(error);
+                })
+            };
+    }, 
 
-  /*filtroPorTitulo: (nombre) => {             
-    return db.Libro.findAll({
-        where: { nombre: nombre }
-    })
-        .then((libros) => {
-            return libros[0];
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-    },*/
 }

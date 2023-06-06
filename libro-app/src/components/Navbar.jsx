@@ -1,7 +1,7 @@
 function Navbar(){
     return(
         <>
-            <div>Hola</div>
+            <div>Barra de navegacion</div>
         </>
     )
 }

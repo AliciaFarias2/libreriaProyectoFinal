@@ -1,7 +1,9 @@
 function Header(){
     return(
         <>
-            <div>Hola</div>
+            <div>
+                Header
+            </div>
         </>
     )
 }
