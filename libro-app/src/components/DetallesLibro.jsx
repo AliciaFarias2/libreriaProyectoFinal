@@ -18,14 +18,14 @@ function DetallesLibro() {
                 {detallesLibro!=null ? (<div>
                     <div className="card">
                             <span> Nombre: {detallesLibro.nombre} </span> <span>.</span>
-                            <span> Fecha de Lanzamiento: {detallesLibro.fecha_lanzamiento } </span> <span>.</span>
+                            <span> Fecha de Lanzamiento: {detallesLibro.lanzamiento } </span> <span>.</span>
                             <span> Cantidad de paginas: {detallesLibro.paginas} </span> <span>.</span>
                             <span> Idioma: {detallesLibro.idioma} </span> <span>.</span>
                             <span> Genero: {detallesLibro.categoria} </span> <span>.</span>
-                            <span> Editorial: {detallesLibro.editorial.nombre} </span> <span>.</span>
-                            <span> Autor: {detallesLibro.nombres + " " + detallesLibro.apellido} </span> <span>.</span>
-                            <span> Fecha de nacimiento del autor: {detallesLibro.fecha_de_nacimiento} </span> <span>.</span>
-                            <span> Nacionalidad del autor: {detallesLibro.nacionalidad} </span> <span>.</span>
+                            <span> Editorial: {detallesLibro.editorial} </span> <span>.</span>
+                            <span> Autor: {detallesLibro.Autor} </span> <span>.</span>
+                            <span> Fecha de nacimiento del autor: {detallesLibro.fechaNacimientoAutor} </span> <span>.</span>
+                            <span> Nacionalidad del autor: {detallesLibro.nacionalidadAutor} </span> <span>.</span>
                             
                         </div>
                 </div>) : (<span>no hay</span>)}
@@ -35,5 +35,6 @@ function DetallesLibro() {
         </>
     )
 }
+
 
 export default DetallesLibro; 
