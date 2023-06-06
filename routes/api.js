@@ -8,5 +8,6 @@ router.get("/cantidadLibrosPorCategoria", controller.cantidadLibros);
 router.get("/detallesLibro/:id", controller.verLibroConDetallesDeAutor);
 router.post("/crearLibro", controller.crearLibro);
 router.post("/filtroPorTitulo", controller.filtroPorTitulo);
+router.get("/autor", controller.autores);
 
 module.exports = router;

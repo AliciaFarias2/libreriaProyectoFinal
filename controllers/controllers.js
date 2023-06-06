@@ -138,4 +138,20 @@ module.exports = {
             };
     }, 
 
+    autores: (req, res) => {
+        const autor = db.Autor.findAll({
+        }); 
+        Promise.all([autor]).then(([autor
+        ])=>{
+            const resultado = autor.map((autor)=>{
+                return {
+                    id: autor.id,
+                    nombre: autor.nombres + " " + autor.apellido,
+                }
+            })
+            res.json(resultado);
+        })
+
+    },
+
 }

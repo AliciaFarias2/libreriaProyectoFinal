@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Libros from "./components/Libros";
 import Categoria from "./components/Categoria";
 import DetallesLibro from "./components/DetallesLibro";
+import FormularioNuevoLibro from "./components/FormularioNuevoLibro";
 import './App.css';
 import {
   //redireccionamiento
@@ -24,6 +25,7 @@ function App() {
           <Route path="libros" element={<Libros/>} />
           <Route path="categoria" element={<Categoria/>} />
           <Route path="detallesLibro/:id" element={<DetallesLibro/>} />
+          <Route path="formCrearLibro" element={<FormularioNuevoLibro/>} />
         </Routes>
       </Router>
     </>
