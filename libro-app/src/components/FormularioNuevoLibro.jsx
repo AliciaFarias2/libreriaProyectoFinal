@@ -43,14 +43,17 @@ function FormularioNuevoLibro(){
                 Fecha de Lanzamiento: <input type="date"/>
                 Idioma: <input type="text"/>
                 Páginas: <input type="number"/>
+
                 <select>
                     <option>elegir</option>
                     {categoria.map((cat)=>{return <option value={cat.id}>{cat.nombre}</option>})}
                 </select>
+
                 <select>
                     <option>elegir</option>
                     {autor.map((autor)=>{return <option value={autor.id}>{autor.nombre}</option>})}
                 </select>
+                
                 <button> Enviar </button>
                 
             </form>
