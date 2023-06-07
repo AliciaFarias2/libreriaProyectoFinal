@@ -154,4 +154,20 @@ module.exports = {
 
     },
 
+    editorial : (req, res) => {
+        const editorial = db.Editorial.findAll({
+        }); 
+        Promise.all([editorial]).then(([editorial
+        ])=>{
+            const resultado = editorial.map((editorial)=>{
+                return {
+                    id: editorial.id,
+                    nombre: editorial.nombre,
+                }
+            })
+            res.json(resultado);
+        })
+
+    },
+
 }

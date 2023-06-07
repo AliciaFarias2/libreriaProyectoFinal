@@ -9,5 +9,6 @@ router.get("/detallesLibro/:id", controller.verLibroConDetallesDeAutor);
 router.post("/crearLibro", controller.crearLibro);
 router.post("/filtroPorTitulo", controller.filtroPorTitulo);
 router.get("/autor", controller.autores);
+router.get("/editorial", controller.editorial);
 
 module.exports = router;
