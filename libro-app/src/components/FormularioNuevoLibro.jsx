@@ -65,7 +65,7 @@ function FormularioNuevoLibro(){
             <form onSubmit={enviarForm} method="post">
                 
                 Titulo: <input id="titulo" name="titulo" type="text"/> 
-                Fecha de Lanzamiento: <input  id="fechaLanzamineto" name= "fechaLanzamiento" type="date"/>
+                Fecha de lanzamiento: <input  id="fechaLanzamineto" name= "fechaLanzamiento" type="date"/>
                 Idioma: <input id="idioma" name="idioma" type="text"/>
                 Páginas: <input id="paginas" name="paginas" type="number"/>
  
@@ -109,7 +109,7 @@ function FormularioNuevoLibro(){
                     })}
                 </select>
 
-                <button> Enviar </button>
+                <button> Crear libro </button>
                 
             </form>
         </>

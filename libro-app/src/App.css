@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+  width: 100%;
+  background-color: #594a47;
+
+}
+
+.logo {
+  height: 12rem;
+  width: 12rem;
+  margin-left: 4rem;
+ 
+}
+
+.botonera {
+  display :flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.opciones {
+  display : flex;
+  flex-direction : column;
+  position: relative;
+  height: 100%;
+  width: 80vw;
+  justify-content: space-around;
+}
+
+.barraBusqueda {
+  display: flex;
+  flex-direction: row;;
+  margin-top: 1rem;
+  justify-content: center;
+ 
+}
+
+.inputBusqueda {
+  width: 40rem;
+  height: 20px;
+}
+
+.button {
+	padding: 1rem;
+	background-color: var(--rosa);
+	font-size: 1rem;
+	color: white;
+	font-weight: 700;
+	width: 7rem;
+	text-align: center;
+	border: none;
+}

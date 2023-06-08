@@ -21,7 +21,7 @@ function Categoria() {
                             <span>Cantidad de libros en esta categoria: {categoria.cantidad}</span>
                         </div>)
                     })
-                }</div>) : (<span>no hay</span>)}
+                }</div>) : (<span>no hay libros</span>)}
 
             </div>
             

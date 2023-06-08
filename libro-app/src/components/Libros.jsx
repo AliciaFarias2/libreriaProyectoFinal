@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import {Link} from "react-router-dom";
+
 
 function Libros() {
     const [libros, setLibros] = useState([])
@@ -8,10 +10,7 @@ function Libros() {
             respuesta.json().then((resultado) => {
                 console.log(resultado)
                 setLibros(resultado)
-
             })
-
-
         })
     }, [])
     return (
@@ -19,10 +18,24 @@ function Libros() {
             <div>
                 {libros.length > 0 ? (<div>{
                     libros.map((libro, index) => {
-                        return (<div className="card" key={"lista-libro-"+index}>
-                            <span> titulo: {libro.nombre} </span> <span> descripcion</span>
-                            <span> datos </span> <span> etc </span>
-                        </div>)
+                        return (<Link className="card" to={"/detallesLibro/"+ libro.id}>
+                            <span>
+                                Titulo: {libro.nombre} 
+                            </span> 
+                            <span>
+                                Genero: {libro.categoria}
+                            </span>
+                            <span> 
+                                Autor: {libro.autor} 
+                            </span> 
+                            <span> 
+                                Editorial: {libro.editorial} 
+                            </span>
+                            <span>
+                                Fecha de lanzamiento: {libro.fechaDeLanzamiento} 
+                            </span>
+
+                        </Link>)
                     })
                 }</div>) : (<span>no hay</span>)}
 
