@@ -81,6 +81,7 @@
 .inputBusqueda {
   width: 40rem;
   height: 20px;
+  
 }
 
 .button {
@@ -92,4 +93,39 @@
 	width: 7rem;
 	text-align: center;
 	border: none;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  background-color: #e8eae3;
+  margin: 0 auto;
+  color:#594a47;
+  height: 70%;
+  width:50%;
+  border-radius: 10px;
+  border: 2px solid #9f7866;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 30px;
+  justify-content: space-around;
+}
+
+.inputForm  {
+ width: 50%;
+ margin: 0 auto;
+}
+
+.buttonForm {
+
+  margin: 0 auto;
+	background-color: #a59f9b;
+	font-size: 1rem;
+	color: #ffffff;
+  border-radius: 3px;
+  border-color: #594a47;
+	font-weight: 700;
+	width: 7rem;
+	text-align: center;
 }

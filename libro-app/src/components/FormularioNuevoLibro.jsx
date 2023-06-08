@@ -62,14 +62,14 @@ function FormularioNuevoLibro(){
     }, [])
 
     return <>
-            <form onSubmit={enviarForm} method="post">
+            <form className="formulario" onSubmit={enviarForm} method="post">
                 
-                Titulo: <input id="titulo" name="titulo" type="text"/> 
-                Fecha de lanzamiento: <input  id="fechaLanzamineto" name= "fechaLanzamiento" type="date"/>
-                Idioma: <input id="idioma" name="idioma" type="text"/>
-                Páginas: <input id="paginas" name="paginas" type="number"/>
+                Titulo: <input className="inputForm" id="titulo" name="titulo" type="text"/> 
+                Fecha de lanzamiento: <input className="inputForm" id="fechaLanzamineto" name= "fechaLanzamiento" type="date"/>
+                Idioma: <input className="inputForm" id="idioma" name="idioma" type="text"/>
+                Páginas: <input className="inputForm" id="paginas" name="paginas" type="number"/>
  
-                <select id="categoria" name="categoria">
+                <select className="inputForm" id="categoria" name="categoria">
                     <option>
                         genero
                     </option>
@@ -83,7 +83,7 @@ function FormularioNuevoLibro(){
                     
                 </select>
 
-                <select id="autor" name="autor">
+                <select className="inputForm" id="autor" name="autor">
                     <option>
                         autor
                     </option>
@@ -96,7 +96,7 @@ function FormularioNuevoLibro(){
                     })}
                 </select>
 
-                <select id="editorial" name="editorial">
+                <select className="inputForm" id="editorial" name="editorial">
                     <option>
                         editorial
                     </option>
@@ -109,7 +109,7 @@ function FormularioNuevoLibro(){
                     })}
                 </select>
 
-                <button> Crear libro </button>
+                <button className="buttonForm"> Crear libro </button>
                 
             </form>
         </>
