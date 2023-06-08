@@ -129,3 +129,45 @@
 	width: 7rem;
 	text-align: center;
 }
+
+.tarjeta {
+	margin: 1rem;
+	padding: 2rem;
+	font-size: 0.7rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 10rem;
+	height: 12rem;
+	background-color: #e8eae3;
+	box-shadow: .1rem .1rem .6rem var(--rosa);
+	border-radius: 0.5rem;
+  border-top-right-radius: 65px;
+  border-bottom-left-radius: 65px;
+  border: 3px solid #554946;
+}
+
+.tituloTarjeta {
+	color: #594a47;
+	text-decoration:underline;
+	font-weight: 700;
+}
+
+.datosSecundarios {
+	color: #282c34;
+}
+
+.cartaContenedora {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: #a59f9b;
+	justify-content: space-evenly;
+	padding-top: 2rem;
+	min-height: 100%;
+}
+
+.mensaje {
+  color: #ffffff;
+  font-size: 2rem;
+}

@@ -27,23 +27,22 @@ function Libros() {
 
     return (
         <>
-            <div>
+            <div className="cartaContenedora">
                 {libros.length > 0 ? (<div>{
                     libros.map((libro, index) => {
-                        return (<Link className="card" to={"/detallesLibro/"+ libro.id}>
-                            <span>
+                        return (<Link className="tarjeta" to={"/detallesLibro/"+ libro.id}>
+                            <span className="tituloTarjeta">
                                 Titulo: {libro.nombre} 
                             </span> 
-                            <span>
+                            <span className="datosSecundarios">
                                 Genero: {libro.categoria}
                             </span>
-                            <span> 
+                            <span className="datosSecundarios"> 
                                 Autor: {libro.autor} 
                             </span> 
-                        
                         </Link>)
                     })
-                }</div>) : (<span>no hay</span>)}
+                }</div>) : (<span className="mensaje">Lo siento, no encuentro el título que estás buscando.</span>)}
 
             </div>
             

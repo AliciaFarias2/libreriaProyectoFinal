@@ -14,18 +14,18 @@ function DetallesLibro() {
     }, []);
     return (
         <>
-            <div>
+            <div className="cartaContenedora">
                 {detallesLibro!=null ? (<div>
-                    <div className="card">
-                            <span> Nombre: {detallesLibro.nombre} </span> <span>.</span>
-                            <span> Fecha de Lanzamiento: {detallesLibro.lanzamiento } </span> <span>.</span>
-                            <span> Cantidad de paginas: {detallesLibro.paginas} </span> <span>.</span>
-                            <span> Idioma: {detallesLibro.idioma} </span> <span>.</span>
-                            <span> Genero: {detallesLibro.categoria} </span> <span>.</span>
-                            <span> Editorial: {detallesLibro.editorial} </span> <span>.</span>
-                            <span> Autor: {detallesLibro.Autor} </span> <span>.</span>
-                            <span> Fecha de nacimiento del autor: {detallesLibro.fechaNacimientoAutor} </span> <span>.</span>
-                            <span> Nacionalidad del autor: {detallesLibro.nacionalidadAutor} </span> <span>.</span>
+                    <div className="tarjeta">
+                            <span className="tituloTarjeta"> Nombre: {detallesLibro.nombre} </span> <span>.</span>
+                            <span className="datosSecundarios"> Fecha de Lanzamiento: {detallesLibro.lanzamiento } </span> <span>.</span>
+                            <span className="datosSecundarios"> Cantidad de paginas: {detallesLibro.paginas} </span> <span>.</span>
+                            <span className="datosSecundarios"> Idioma: {detallesLibro.idioma} </span> <span>.</span>
+                            <span className="datosSecundarios"> Genero: {detallesLibro.categoria} </span> <span>.</span>
+                            <span className="datosSecundarios"> Editorial: {detallesLibro.editorial} </span> <span>.</span>
+                            <span className="datosSecundarios"> Autor: {detallesLibro.Autor} </span> <span>.</span>
+                            <span className="datosSecundarios"> Fecha de nacimiento del autor: {detallesLibro.fechaNacimientoAutor} </span> <span>.</span>
+                            <span className="datosSecundarios"> Nacionalidad del autor: {detallesLibro.nacionalidadAutor} </span> <span>.</span>
                             
                         </div>
                 </div>) : (<span>no hay</span>)}

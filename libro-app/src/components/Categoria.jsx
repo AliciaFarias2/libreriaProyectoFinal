@@ -13,12 +13,12 @@ function Categoria() {
     }, []);
     return (
         <>
-            <div>
+            <div className="cartaContenedora">
                 {categoria.length > 0 ? (<div>{
                     categoria.map((categoria, index) => {
-                        return (<div className="card" key={"lista-libro-"+index}>
-                            <span> Genero: {categoria.nombre} </span> <span>.</span>
-                            <span>Cantidad de libros en esta categoria: {categoria.cantidad}</span>
+                        return (<div className="tarjeta" key={"lista-libro-"+index}>
+                            <span className="tituloTarjeta"> Genero: {categoria.nombre} </span> <span>.</span>
+                            <span className="datosSecundarios">Cantidad de libros en esta categoria: {categoria.cantidad}</span>
                         </div>)
                     })
                 }</div>) : (<span>no hay libros</span>)}
