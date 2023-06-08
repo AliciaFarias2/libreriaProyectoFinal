@@ -5,6 +5,7 @@ import Libros from "./components/Libros";
 import Categoria from "./components/Categoria";
 import DetallesLibro from "./components/DetallesLibro";
 import FormularioNuevoLibro from "./components/FormularioNuevoLibro";
+import BusquedaPorTitulo from "./components/BusquedaPorTitulo";
 import './App.css';
 import {
   //redireccionamiento
@@ -26,8 +27,12 @@ function App() {
           <Route path="categoria" element={<Categoria/>} />
           <Route path="detallesLibro/:id" element={<DetallesLibro/>} />
           <Route path="formCrearLibro" element={<FormularioNuevoLibro/>} />
+          <Route path="buscador/:titulo" element={<BusquedaPorTitulo/>} />
         </Routes>
       </Router>
+
+
+
     </>
   );
 }
