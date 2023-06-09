@@ -16,7 +16,7 @@ function Libros() {
     return (
         <>
             <div className="cartaContenedora">
-                {libros.length > 0 ? (<div>{
+                {libros.length > 0 ? (<>{
                     libros.map((libro, index) => {
                         return (<Link className="tarjeta" to={"/detallesLibro/"+ libro.id}>
                             <span className="tituloTarjeta">
@@ -37,7 +37,7 @@ function Libros() {
 
                         </Link>)
                     })
-                }</div>) : (<span>no hay</span>)}
+                }</>) : (<span>no hay</span>)}
 
             </div>
             

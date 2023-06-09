@@ -15,7 +15,7 @@ function DetallesLibro() {
     return (
         <>
             <div className="cartaContenedora">
-                {detallesLibro!=null ? (<div>
+                {detallesLibro!=null ? (<>
                     <div className="tarjeta">
                             <span className="tituloTarjeta"> Nombre: {detallesLibro.nombre} </span> <span>.</span>
                             <span className="datosSecundarios"> Fecha de Lanzamiento: {detallesLibro.lanzamiento } </span> <span>.</span>
@@ -28,7 +28,7 @@ function DetallesLibro() {
                             <span className="datosSecundarios"> Nacionalidad del autor: {detallesLibro.nacionalidadAutor} </span> <span>.</span>
                             
                         </div>
-                </div>) : (<span>no hay</span>)}
+                </>) : (<span>no hay</span>)}
 
             </div>
             

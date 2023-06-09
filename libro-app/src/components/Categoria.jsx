@@ -14,14 +14,14 @@ function Categoria() {
     return (
         <>
             <div className="cartaContenedora">
-                {categoria.length > 0 ? (<div>{
+                {categoria.length > 0 ? (<>{
                     categoria.map((categoria, index) => {
                         return (<div className="tarjeta" key={"lista-libro-"+index}>
                             <span className="tituloTarjeta"> Genero: {categoria.nombre} </span> <span>.</span>
                             <span className="datosSecundarios">Cantidad de libros en esta categoria: {categoria.cantidad}</span>
                         </div>)
                     })
-                }</div>) : (<span>no hay libros</span>)}
+                }</>) : (<span>no hay libros</span>)}
 
             </div>
             
